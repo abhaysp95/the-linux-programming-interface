@@ -5,6 +5,10 @@ project(The_Linux_Programming_Interface LANGUAGES C)
 SET(CMAKE_C_STANDARD 99)
 SET(CMAKE_C_STANDARD_REQUIRED ON)
 
+set(CMAKE_C_COMPILER    "/usr/bin/clang")
+set(CMAKE_C_FLAGS       "-Wall -std=c99")
+set(CMAKE_C_FLAGS_DEBUG "-g")
+
 set(CMAKE_EXPORT_COMPILE_COMPILE_COMMANDS ON CACHE INTERNAL "")
 
 set(LIB_SOURCES tlpi_lib/src/ename.c.inc tlpi_lib/src/error_functions.c tlpi_lib/src/get_num.c)
