@@ -15,18 +15,17 @@ static void usageError(char* progName, char* msg, int opt) {
 }
 
 int main(int argc, char **argv) {
-	int opt, xfnd;
-	char* pstr;
-
-	xfnd = 0;
-	pstr = NULL;
+	int opt = 0, xfnd = 0;
+	char* pstr = NULL;
 
 	/** setting ':' at start of optarg is same as saying opterr = 0(though
 	 * it has some difference) also, the option which require an arugment
 	 * should be followed by a ':', initially 'x' doesn't require argument,
 	 * but if you'll make it 'x:' then it'll require argument and case ':'
-	 * will be executed */
-	while((opt = getopt(argc, argv, ":p:x:")) != -1) {
+	 * will be executed. Putting + means that it avoids permutation of argv
+	 * :: specifies optional argument, but there should be no space between
+	 * option and arugment */
+	while((opt = getopt(argc, argv, "+:p::x")) != -1) {
 		printf("opt =%3d (%c); optind = %d", opt, printable(opt), optind);
 		if(opt == '?' || opt == ':')
 			printf("; optopt =%3d (%c)", optopt, printable(optopt));
@@ -56,3 +55,5 @@ int main(int argc, char **argv) {
 		printf("First nonoption argument is \"%s\" at argv[%d]\n", argv[optind], optind);
 	exit(EXIT_SUCCESS);
 }
+
+/** there are also 'getopt_long, getopt_long_only' and 'getsubopt' for more commandline parsing */
