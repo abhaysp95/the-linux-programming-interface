@@ -21,8 +21,9 @@ target_include_directories(tlpi_library PUBLIC tlpi_lib/include)
 target_compile_features(tlpi_library PUBLIC c_std_99)
 
 add_subdirectory(test_tlpi)
-add_subdirectory(file_io_the_universal_io_model)
 add_subdirectory(system_programming_concept)
+add_subdirectory(file_io_the_universal_io_model)
+add_subdirectory(file_io_further_details)
 add_subdirectory(appendix_b)
 
 if("${CMAKE_EXPORT_COMPILE_COMPILE_COMMANDS}")
