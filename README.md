@@ -18,6 +18,13 @@ $ cmake -S . -B build  # builds with no debug and "Unix Makefiles" as generator
 $ cmake -GNinja -S . -B build  # if you want to use Ninja
 ```
 
+### Change Compiler
+
+I've added commented `cmake variables` in `CMakeLists.txt` of _project_source_directory_. You can change compiler and compiling flags from there. If you want to do it from command line, you can do it in following way:
+```sh
+$ cmake -DCMAKE_C_COMPILER="/usr/bin/clang" -DCMAKE_C_FLAGS="-Wall -std=c99" -DCMAKE_C_FLAGS_DEBUG="-ggdb" -S . -B build
+```
+
 ### Build with Debug
 ```sh
 $ cmake -DCMAKE_BUILD_TYPE=Debug -S . -B build_debug
