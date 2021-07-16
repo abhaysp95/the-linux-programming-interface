@@ -1,2 +1,4 @@
 add_subdirectory(bad_exclusive_open)
 add_subdirectory(t_readv)
+add_subdirectory(large_file)
+add_subdirectory(large_file2)
