@@ -42,3 +42,6 @@ int main(int argc, char **argv) {
 
 	exit(EXIT_SUCCESS);
 }
+
+
+/** NOTE: this file also works as second exercise for this chapter */
