@@ -1,0 +1,1 @@
+add_subdirectory(bad_exclusive_open)

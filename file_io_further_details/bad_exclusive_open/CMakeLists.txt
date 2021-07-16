@@ -1,0 +1,3 @@
+add_executable(bad_exclusive_open src/main.c)
+add_dependencies(bad_exclusive_open tlpi_library)
+target_link_libraries(bad_exclusive_open PUBLIC tlpi_library)
