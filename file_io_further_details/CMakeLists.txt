@@ -1,1 +1,2 @@
 add_subdirectory(bad_exclusive_open)
+add_subdirectory(t_readv)
