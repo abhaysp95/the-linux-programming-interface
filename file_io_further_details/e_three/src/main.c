@@ -70,7 +70,7 @@ int main(int argc, char **argv) {
  *    file size: around 2mb(approx. 1 mb from both execution)
  * 2. Second run:
  *    $ ./e_three f2.txt 100000 a x & ./e_three f2.txt 100000 b x
- *    file size: little more than 1 mb
+ *    file size: around 1mb
  *
  * Reason:
  * -------
