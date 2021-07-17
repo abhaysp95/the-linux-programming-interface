@@ -41,7 +41,7 @@ int main(int argc, char **argv) {
 	printf("before write(PID): %ld\n", (long)getpid());
 	while(num--) {
 		if(x) {
-			if(-1 == lseek(fd, 1, SEEK_END))
+			if(-1 == lseek(fd, 0, SEEK_END))  // change 0 to 1, to avoid overwriting in lseek()
 				errExit("lseek");
 		}
 		if(-1 == write(fd, ch, 1))
