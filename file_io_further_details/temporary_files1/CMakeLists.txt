@@ -1,0 +1,3 @@
+add_executable(temporary_files1 src/main.c)
+add_dependencies(temporary_files1 tlpi_library)
+target_link_libraries(temporary_files1 PUBLIC tlpi_library)
