@@ -25,13 +25,20 @@ int main(int argc, char **argv) {
 	printf("file opened(PID): %ld\n", (long)getpid());
 
 
-	int fflags = -1, accessmode = -1;
+	int fflags = -1;
 	fflags = fcntl(fd, F_GETFL);
 	if(-1 == fflags)
 		errExit("fcntl");
 
+	// Method used for checking acess mode
+	/*int accessmode = -1;
 	accessmode = fflags & O_ACCMODE;
-	if(O_APPEND == accessmode)   /** this doesn't seem to work */
+	if(O_APPEND == accessmode)   [>* this doesn't seem to work <]
+		printf("file opened with O_APPEND\n");
+	else
+		printf("file not opened with O_APPEND\n");*/
+
+	if(fflags & O_APPEND)  /** this works */
 		printf("file opened with O_APPEND\n");
 	else
 		printf("file not opened with O_APPEND\n");

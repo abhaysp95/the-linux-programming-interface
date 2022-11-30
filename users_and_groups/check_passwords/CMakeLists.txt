@@ -1,0 +1,4 @@
+add_executable(check_passwords src/main.c)
+add_dependencies(check_passwords tlpi_library)
+target_link_libraries(check_passwords PUBLIC tlpi_library)
+target_link_libraries(check_passwords PUBLIC crypt)

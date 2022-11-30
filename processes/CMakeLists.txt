@@ -1,0 +1,6 @@
+add_subdirectory(necho)
+add_subdirectory(display_env)
+add_subdirectory(modify_env)
+add_subdirectory(t_longjmp)
+add_subdirectory(abusing_longjmp)
+add_subdirectory(setjmp_vars)
